@@ -3,7 +3,6 @@
 
 (require 'test-simple)
 (require 'load-relative)
-(require 'realgud-buffer-command)
 (load-file "../pry/init.el")
 (load-file "./regexp-helper.el")
 

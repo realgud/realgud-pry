@@ -36,13 +36,9 @@
   "Realgud Ruby Pry debugger"
   :group 'processes
   :group 'tools
-  :version "24.4")
+  :version "24.3")
 
-(require-relative-list
- '(
-   "./realgud/debugger/pry/pry"
-   ) "realgud-")
-)
+(require-relative-list '( "./pry/pry" ) "realgud-")
 
 (provide-me)
 

@@ -16,8 +16,7 @@
 ;;  `realgud:pry' Main interface to pry via Emacs
 (require 'cl)
 (require 'load-relative)
-(require-relative-list '("../../common/helper" "../../common/utils")
-		       "realgud-")
+(require 'realgud)
 (require-relative-list '("core" "track-mode") "realgud:pry-")
 
 ;; This is needed, or at least the docstring part of it is needed to

@@ -79,7 +79,7 @@ realgud-loc-pat struct")
 (setf (gethash "brkpt-set" realgud:pry-pat-hash)
       (make-realgud-loc-pat
        :regexp (format "^Breakpoint %s \\(.+\\), @ \\([.*]\\) "
-		       realgud:regexp-captured-num realgud:regexp-captured-num)
+		       realgud:regexp-captured-num)
        :num 1
        :file-group 3
        :line-group 4))
