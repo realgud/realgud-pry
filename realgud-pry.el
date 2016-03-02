@@ -1,4 +1,4 @@
-;;; realgud-pry.el --- A modular front-end for interacting with external debuggers
+;;; realgud-pry.el --- realgud front-end to the Ruby pry debugger
 
 ;; Author: Rocky Bernstein
 ;; Version: 1.0
