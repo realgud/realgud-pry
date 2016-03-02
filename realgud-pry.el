@@ -1,9 +1,9 @@
-;;; realgud.el --- A modular front-end for interacting with external debuggers
+;;; realgud-pry.el --- A modular front-end for interacting with external debuggers
 
 ;; Author: Rocky Bernstein
 ;; Version: 1.0
-;; Package-Requires: ((realgud))
-;; URL: http://github.com/rocky/emacs-dbgr
+;; Package-Requires: ((realgud "1.3"))
+;; URL: http://github.com/rocky/realgud-pry
 ;; Compatibility: GNU Emacs 24.x
 
 ;; Copyright (C) 2016 Free Software Foundation, Inc
@@ -30,10 +30,14 @@
 
 ;;; Code:
 
+;; Press C-x C-e at the end of the next line configure the program in
+;; for building via "make" to get set up.
+;; (compile (format "EMACSLOADPATH=:%s:%s ./autogen.sh" (file-name-directory (locate-library "test-simple.elc")) (file-name-directory (locate-library "realgud.elc"))))
+
 (require 'load-relative)
 
 (defgroup realgud nil
-  "Realgud Ruby Pry debugger"
+  "Realgud interface to Ruby Pry debugger"
   :group 'processes
   :group 'tools
   :version "24.3")
@@ -42,4 +46,4 @@
 
 (provide-me)
 
-;;; realgud.el ends here
+;;; realgud-pry.el ends here
