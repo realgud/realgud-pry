@@ -36,7 +36,7 @@
 
 (require 'load-relative)
 
-(defgroup realgud nil
+(defgroup realgud-pry nil
   "Realgud interface to Ruby Pry debugger"
   :group 'processes
   :group 'tools
