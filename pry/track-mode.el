@@ -54,7 +54,7 @@ Key bindings:
   :keymap realgud:pry-track-mode-map
   (if realgud:pry-track-mode
       (progn
-	(realgud:track-set-debugger "pry" "realgud:pry")
+	(realgud:track-set-debugger "realgud:pry")
         (realgud:pry-track-mode-hook)
         (realgud:track-mode-enable))
     (progn
