@@ -12,7 +12,7 @@
 
 (eval-when-compile
   (defvar dbg-name)   (defvar realgud-pat-hash)   (defvar realgud-bt-hash)
-  (defvar loc-pat)    (defvar prompt-pat)         (defvar s1)
+  (defvar loc-pat)    (defvar prompt-pat)
   (defvar file-group) (defvar line-group)         (defvar pos)
   (defvar test-dbgr)  (defvar test-text)
 )
@@ -45,7 +45,7 @@
 (note "lang-backtrace")
 (setq realgud-bt-pat  (gethash "lang-backtrace"
                                realgud:pry-pat-hash))
-(setq s1
+(setq test-text
       "	from /ruby/gems/2.2.0/gems/fog-1.32.0/lib/fog/digitalocean.rb:1:in `<top (required)>
        	from /Users/fog-1.32.0/lib/fog.rb:28:in `require'")
 

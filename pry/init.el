@@ -14,7 +14,7 @@
 
 ;;; pry debugger
 
-(eval-when-compile (require 'cl))
+(eval-when-compile (require 'cl-lib))
 
 (require 'realgud)
 (require 'realgud-lang-ruby)
@@ -51,7 +51,7 @@ realgud-loc-pat struct")
 ;;  [10] pry(main)>
 (setf (gethash "prompt" realgud:pry-pat-hash)
       (make-realgud-loc-pat
-       :regexp   "^\\[[0-9]+\\] pry(.*)> " 
+       :regexp   "^\\[[0-9]+\\] pry(.*)> "
        ))
 
 ;; Regular expression that describes a Ruby YARV syntax error line.
@@ -59,7 +59,7 @@ realgud-loc-pat struct")
       realgud-ruby-YARV-syntax-error-pat)
 
 ;; Regular expression that describes a Ruby YARV backtrace line.
-;; For example: 
+;; For example:
 ;; 	from /ruby/gems/2.2.0/gems/fog-1.32.0/lib/fog/digitalocean.rb:1:in `<top (required)>'
 ;; 	from /Users/fog-1.32.0/lib/fog.rb:28:in `require'
 ;;	from /usr/lib/ruby/gems/rspec/compatibility.rb:6:in `const_missing'
@@ -75,7 +75,7 @@ realgud-loc-pat struct")
 
 ;; Regular expression that describes a "breakpoint set" line
 ;; For example:
-;   Breakpoint 1: /Users/rocky/src/environments/development.rb @ 14 (Enabled) 
+;   Breakpoint 1: /Users/rocky/src/environments/development.rb @ 14 (Enabled)
 (setf (gethash "brkpt-set" realgud:pry-pat-hash)
       (make-realgud-loc-pat
        :regexp (format "^Breakpoint %s \\(.+\\), @ \\([.*]\\) "

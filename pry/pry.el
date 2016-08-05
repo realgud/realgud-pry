@@ -14,7 +14,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;;  `realgud:pry' Main interface to pry via Emacs
-(require 'cl)
+(require 'cl-lib)
 (require 'load-relative)
 (require 'realgud)
 (require-relative-list '("core" "track-mode") "realgud:pry-")
