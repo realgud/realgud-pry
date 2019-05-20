@@ -1,13 +1,13 @@
-;;; realgud-pry.el --- realgud front-end to the Ruby pry debugger
+;;; realgud-pry.el --- Realgud front-end to the Ruby pry debugger -*- lexical-binding: t -*-
 
 ;; Author: Rocky Bernstein
-;; Version: 1.1
+;; Version: 1.1.0
 ;; Package-Type: multi
-;; Package-Requires: ((realgud "1.4.3") (cl-lib "0.5") (emacs "24"))
+;; Package-Requires: ((realgud "1.4.5") (load-relative "1.2") (cl-lib "0.5") (emacs "24"))
 ;; URL: http://github.com/rocky/realgud-pry
 ;; Compatibility: GNU Emacs 24.x
 
-;; Copyright (C) 2016 Free Software Foundation, Inc
+;; Copyright (C) 2016, 2019 Free Software Foundation, Inc
 
 ;; Author: Rocky Bernstein <rocky@gnu.org>
 
