@@ -75,15 +75,7 @@ fringe and marginal icons.
 	 (cmd-buf (realgud:run-process realgud:pry-command-name
 				       script-name parsed-cmd-args
 				       'realgud:pry-minibuffer-history
-				       nil))
-	 )
-    (if cmd-buf
-	(with-current-buffer cmd-buf
-	  (realgud-command "set annotate 1" nil nil nil)
-	  )
-      )
-    )
-  )
+				       nil)))))
 
 (provide-me "realgud-")
 
