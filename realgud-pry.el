@@ -3,9 +3,9 @@
 ;; Author: Rocky Bernstein
 ;; Version: 1.1.0
 ;; Package-Type: multi
-;; Package-Requires: ((realgud "1.4.5") (load-relative "1.2") (cl-lib "0.5") (emacs "24"))
+;; Package-Requires: ((realgud "1.4.5") (load-relative "1.2") (cl-lib "0.5") (emacs "25"))
 ;; URL: http://github.com/rocky/realgud-pry
-;; Compatibility: GNU Emacs 24.x
+;; Compatibility: GNU Emacs 25.x
 
 ;; Copyright (C) 2016, 2019 Free Software Foundation, Inc
 
@@ -33,7 +33,7 @@
 
 ;; Press C-x C-e at the end of the next line configure the program in
 ;; for building via "make" to get set up.
-;; (compile (format "EMACSLOADPATH=:%s:%s ./autogen.sh" (file-name-directory (locate-library "test-simple.elc")) (file-name-directory (locate-library "realgud.elc"))))
+;; (compile (format "EMACSLOADPATH=:%s:%s:%s:%s ./autogen.sh" (file-name-directory (locate-library "loc-changes.elc")) (file-name-directory (locate-library "test-simple.elc")) (file-name-directory (locate-library "load-relative.elc")) (file-name-directory (locate-library "realgud.elc"))))
 
 (require 'load-relative)
 
