@@ -37,10 +37,13 @@ realgud-loc-pat struct")
 ;; Regular expression that describes a pry location generally shown
 ;; before a command prompt.
 ;; For example:
+;; From: /Users/mypizza/mypizza-web/config/environments/development.rb:12 :
+;; The location format was changed in version 0.13 of pry.  This regex attempts to
+;; match both.  This is an example of the old format:
 ;; From: /Users/mypizza/mypizza-web/config/environments/development.rb @ line 12 :
 (setf (gethash "loc" realgud:pry-pat-hash)
       (make-realgud-loc-pat
-       :regexp (format "^From: %s:%s"
+       :regexp (format "^From: %s\\(?: @ line \\|:\\)%s"
 		       realgud:pry-frame-file-regexp realgud:regexp-captured-num)
        :file-group 1
        :line-group 2))
