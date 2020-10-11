@@ -45,6 +45,21 @@
 (note "lang-backtrace")
 (setq realgud-bt-pat  (gethash "lang-backtrace"
                                realgud:pry-pat-hash))
+
+(setq test-text "From: /Users/mypizza-web/config/environments/development.rb:12 :")
+(note "traceback location matching")
+
+(assert-t (numberp (cmdbuf-loc-match test-text test-dbgr)) "basic location")
+(assert-equal "/Users/mypizza-web/config/environments/development.rb"
+	      (match-string (realgud-cmdbuf-info-file-group test-dbgr)
+			    test-text) "extract file name")
+(assert-equal "12"
+	      (match-string (realgud-cmdbuf-info-line-group test-dbgr)
+			    test-text) "extract line number")
+(note "lang-backtrace")
+(setq realgud-bt-pat  (gethash "lang-backtrace"
+                               realgud:pry-pat-hash))
+
 (setq test-text
       "	from /ruby/gems/2.2.0/gems/fog-1.32.0/lib/fog/digitalocean.rb:1:in `<top (required)>
        	from /Users/fog-1.32.0/lib/fog.rb:28:in `require'")
