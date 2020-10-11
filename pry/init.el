@@ -40,7 +40,7 @@ realgud-loc-pat struct")
 ;; From: /Users/mypizza/mypizza-web/config/environments/development.rb @ line 12 :
 (setf (gethash "loc" realgud:pry-pat-hash)
       (make-realgud-loc-pat
-       :regexp (format "^From: %s @ line %s"
+       :regexp (format "^From: %s:%s"
 		       realgud:pry-frame-file-regexp realgud:regexp-captured-num)
        :file-group 1
        :line-group 2))
